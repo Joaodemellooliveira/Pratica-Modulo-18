@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../lib/bootstrap.min.css">
+    <link rel="stylesheet" href="@@ENDERECO_DO_CSS">
+    <title>Compilação Grunt</title>
+</head>
+<body>
+    <main>
+        <h1>Compilação pelo Grunt</h1>
+        <p>Este projeto serve para mostrar o efeito de compilação que o Grunt pode gerar, automatizando o processo de desenvolvimento e permitindo a divisão entre os ambientes de desenvolvimento e produção.</p>
+        </div>
+    </main>
+    <div id="grunt-use-info" class="section">
+        <div class="container">
+            <nav class="nav nav-tabs mb-4">
+                <button data-bs-toggle="tab" data-bs-target="#aba1" class="nav-link active" type="button">HTML</button>
+                <button data-bs-toggle="tab" data-bs-target="#aba2" class="nav-link" type="button">LESS</button>
+                <button data-bs-toggle="tab" data-bs-target="#aba3" class="nav-link" type="button">javaScript</button>
+            </nav>
+            <div class="tab-content pb-2">
+                <div id="aba1" class="tab-pane active">
+                    <h2>HTML</h2>
+                    <p>Para o HTML utilizamos tanto o <strong>htmlmin</strong> para minimizar o tamanho do final do arquivo e portanto ganhar performance no carregamento quanto o replace para modificar os arquivos para o qual o HTML aponta no ambiente de produção. </p>
+                    
+            </div>
+            <div id="aba2" class="tab-pane ">
+                <div class="container">
+                    <h2>LESS</h2>
+                    <p>O CSS deste projeto foi feito utilizando o LESS, e depois compilado pelo Grunt para o CSS em uma versão de produção que será exibida ao publicar o site. Isto permite a separação dos ambientes e também permite que outros desenvolvedores consigam instalar as dependências e trabalhar no projeto de maneira fácil, enquanto também entrega apenas a informação necessária ao usuário final, permitindo mais agilidade no carregamento devido ao tamanho reduzido, assim como também retirando possivel informação irrelevante ao usuário final.</p>
+                </div>
+            </div>
+                <div id="aba3" class="tab-pane ">
+                    <div class="container">
+                        <h2>javaScript</h2>
+                        <p>Baseado no projeto deste módulo o formulário abaixo gera um número aleatório dentro do parâmetro determinado, entretanto ele exibe o número arredondado utilizando as três variações diferentes do “Math” do javaScript. Assim podemos ver as possíveis variações que a linguagem nos permite O código foi compilado pelo Grunt para a versão de distribuição.</p>
+                        <p>É importante destacar que o arredondamento não possui ajustes(+1 por exemplo) e logo serve para mostrar as diferenças no arredondamento mesmo quando as mesmas fogem dos parâmetros do input.</p>
+                        <p>Também utilizamos o uglify para minimizar o tamanho do arquivo final assim ganhando performance no carregamento para o usuário final no ambiente de produção.
+                        </p>
+                    </div>
+                    <form id="form-sorteador">
+                        <div>
+                            <label for="numero-maximo">Número máximo</label>
+                            <input type="number" id="numero-maximo" required min="2" value="2" step="1">
+                        </div>
+                        <button type="submit" class="submeter">Sortear número</button>
+                    </form>
+                    <div class="resultado">
+                        <h3>
+                            O número sorteado foi: <span id="resultado-valor"></span>
+                        </h3>
+                        <div class="arredondado row">
+                            <div class="col-4">
+                                <h4>
+                                    Arredondado utilizando Math.floor(): <span id="resultado-floor"></span>
+                                </h4>
+                            </div>
+                            <div class="col-4">
+
+                                <h4>
+                                    Arredondado utilizando Math.round(): <span id="resultado-round"></span>
+                                </h4>
+                            </div>
+                            <div class="col-4">
+                                
+                                <h4>
+                                    Arredondado utilizando Math.ceil(): <span id="resultado-ceil"></span>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+    <script src="@@ENDERECO_DO_JS"></script>
+</body>
+</html>
